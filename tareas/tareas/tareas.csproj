@@ -244,6 +244,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Tarea\Agregar.cshtml" />
     <Content Include="Views\Tarea\Listar.cshtml" />
+    <Content Include="Views\Tarea\Listar2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -25,13 +25,20 @@ namespace TasksMVC.Controllers
             return View(listaTareas);
         }
 
+        public ActionResult Listar2()
+        {
+            List<Tarea> listaTareas = administradorTareas.ObtenerTodas();
+
+            return View(listaTareas);
+        }
+
         [HttpGet]
         public ActionResult Agregar()
         {
             return View();
         }
 
-        [HttpPost]
+        [HttpPost] //Llega info de view agregar.cshtml 
         public ActionResult Agregar(Tarea tarea)
         {
             // Agregar la nueva tarea
@@ -44,6 +51,7 @@ namespace TasksMVC.Controllers
         public ActionResult Completar(int id)
         {
             // Completar tarea...
+            administradorTareas.Completar(id);
 
             return RedirectToAction("Listar");
         }
